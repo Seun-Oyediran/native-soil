@@ -1,5 +1,5 @@
 import React from "react";
-import { CollectionButton, GridItem } from "@/components/shared";
+import { CollectionButton } from "@/components/shared";
 
 export default function Home() {
   return (
@@ -19,7 +19,8 @@ export default function Home() {
         {Array(60)
           .fill(0)
           .map((_, index) => {
-            return <GridItem key={index} />;
+            // return <GridItem key={index} />;
+            return <div key={index} />;
           })}
       </div>
 

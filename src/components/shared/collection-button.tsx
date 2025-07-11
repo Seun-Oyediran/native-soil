@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { collectionData } from "@/utils/static";
+import Link from "next/link";
+import { collectionsData } from "@/utils/static";
+import { routes } from "@/routes";
 
 export function CollectionButton() {
   const [showCollection, setShowCollection] = useState(false);
@@ -15,23 +17,30 @@ export function CollectionButton() {
             </h3>
 
             <div className="flex flex-col gap-[2px]">
-              <h4 className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-white">
-                all
-              </h4>
-              {collectionData.map((item) => {
+              <Link href="/" onClick={() => setShowCollection(false)}>
+                <h4 className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-white cursor-pointer hover:text-[#CCCCCC] transition-colors">
+                  all
+                </h4>
+              </Link>
+              {collectionsData.map((collection) => {
+                // Get the first piece of the collection
+                const firstPiece = collection.pieces[0];
                 return (
-                  <div
-                    key={item.id}
-                    className="flex items-center justify-between"
+                  <Link
+                    key={collection.id}
+                    href={`${routes.art.path}/${collection.id}?pieceId=${firstPiece.id}`}
+                    onClick={() => setShowCollection(false)}
                   >
-                    <p className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-[#6E6E6E]">
-                      {item?.name}
-                    </p>
+                    <div className="flex items-center justify-between cursor-pointer hover:bg-[#1A1A1A] p-1 -m-1 rounded transition-colors">
+                      <p className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-[#6E6E6E] hover:text-[#AAAAAA] transition-colors">
+                        {collection.collection_name}
+                      </p>
 
-                    <p className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-[#6E6E6E]">
-                      {item?.pcs} pcs
-                    </p>
-                  </div>
+                      <p className="font-medium text-xs leading-[21px] tracking-[-1.32px] text-[#6E6E6E] hover:text-[#AAAAAA] transition-colors">
+                        {collection.no_of_pieces} pcs
+                      </p>
+                    </div>
+                  </Link>
                 );
               })}
             </div>
