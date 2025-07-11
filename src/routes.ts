@@ -11,8 +11,16 @@ export const routes = {
     name: "art",
     path: "/art",
   },
+  collection: {
+    name: "collection",
+    path: "/collection",
+  },
   accesories: {
     name: "accesories",
     path: "/accesories",
+  },
+  qrCodes: {
+    name: "qr-codes",
+    path: "/qr-codes",
   },
 };

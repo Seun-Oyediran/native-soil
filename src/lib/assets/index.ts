@@ -48,6 +48,14 @@ import funfun2 from "../../../public/media/funfun/funfun2.png";
 import funfun3 from "../../../public/media/funfun/funfun3.png";
 import funfun4 from "../../../public/media/funfun/funfun4.png";
 import funfun5 from "../../../public/media/funfun/funfun5.png";
+import azureMetamorphosis from "../../../public/media/metamorphosis/azure.png";
+import crimson from "../../../public/media/metamorphosis/crimson.png";
+import gold from "../../../public/media/metamorphosis/gold.png";
+import lagoon from "../../../public/media/metamorphosis/lagoon.png";
+import cosmos from "../../../public/media/nativesoil/cosmos.png";
+import crown from "../../../public/media/nativesoil/crown.png";
+import gathering from "../../../public/media/nativesoil/gathering.png";
+import sunlight from "../../../public/media/nativesoil/sunlight.png";
 
 const assets = {
   art,
@@ -116,6 +124,18 @@ const assets = {
   funfun3,
   funfun4,
   funfun5,
+
+  // Metamorphosis collection
+  azureMetamorphosis,
+  crimson,
+  gold,
+  lagoon,
+
+  // Native Soil collection
+  cosmos,
+  crown,
+  gathering,
+  sunlight,
 };
 
 export default assets;
