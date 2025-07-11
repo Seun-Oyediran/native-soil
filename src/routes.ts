@@ -7,4 +7,12 @@ export const routes = {
     name: "about",
     path: "/about",
   },
+  art: {
+    name: "art",
+    path: "/art",
+  },
+  accesories: {
+    name: "accesories",
+    path: "/accesories",
+  },
 };
