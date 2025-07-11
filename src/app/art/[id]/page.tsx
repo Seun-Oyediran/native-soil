@@ -98,7 +98,7 @@ export default function Page() {
             <ArrowLeft />
           </button>
 
-          <Carousel className="flex-1" setApi={setApi}>
+          <Carousel className="flex-1 w-full max-w-[220px]" setApi={setApi}>
             <CarouselContent>
               {collection.pieces.map((piece) => (
                 <CarouselItem key={piece.id}>
@@ -106,7 +106,7 @@ export default function Page() {
                     <Image
                       src={piece.asset}
                       alt={piece.piecename}
-                      className="w-full"
+                      className="w-full max-w-[220px]"
                     />
                     {piece.sold_out && (
                       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -174,7 +174,7 @@ export default function Page() {
             </button>
           ) : (
             <a
-              href={`https://wa.me/2347065325645?text=Hi, I'm interested in "${
+              href={`https://wa.me/2348098365218?text=Hi, I'm interested in "${
                 collection.pieces[current - 1]?.piecename ||
                 currentPiece.piecename
               }" from the ${collection.collection_name} collection.`}
