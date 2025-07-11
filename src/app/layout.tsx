@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/shared";
+import ReactLenis from "lenis/react";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -22,12 +23,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased ${ibmPlexMono} px-2 max-w-[1000px] mx-auto`}
+      <ReactLenis
+        root
+        options={{
+          smoothWheel: true,
+          // wheelMultiplier: 0.5,
+          infinite: false,
+        }}
       >
-        <Header />
-        {children}
-      </body>
+        <body
+          className={`antialiased ${ibmPlexMono} px-2 max-w-[1000px] mx-auto`}
+        >
+          <Header />
+          {children}
+        </body>
+      </ReactLenis>
     </html>
   );
 }

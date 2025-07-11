@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import assets from "@/lib/assets";
+import { routes } from "@/routes";
 
 export function GridItem() {
   return (
-    <Link href={"#"}>
+    <Link href={`${routes.art.path}/1`}>
       <div className="flex flex-col">
         <div className="min-h-[232px] flex justify-center items-center bg-[#F6F6F6]">
           <Image src={assets.art} alt="art" className="max-w-[90px]" />

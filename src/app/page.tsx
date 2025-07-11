@@ -1,5 +1,5 @@
-import { CollectionButton, GridItem } from "@/components/shared";
 import React from "react";
+import { CollectionButton, GridItem } from "@/components/shared";
 
 export default function Home() {
   return (
