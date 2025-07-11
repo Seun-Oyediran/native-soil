@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useParams, useSearchParams } from "next/navigation";
-import { ArrowLeft } from "@/components/icons/icon";
+import { ArrowLeft, ArrowRight } from "@/components/icons/icon";
 import { collectionsData } from "@/utils/static";
 import {
   Carousel,
@@ -135,7 +135,7 @@ export default function Page() {
             }}
             disabled={isAtEnd}
           >
-            <ArrowLeft rotate />
+            <ArrowRight />
           </button>
         </div>
       </div>
